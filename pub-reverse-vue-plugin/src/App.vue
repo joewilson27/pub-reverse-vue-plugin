@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { getCurrentInstance } from 'vue'
+
+const x = getCurrentInstance()
+
 </script>
 
 <template>
   <div>
+    <h1>{{ x?.appContext.config.globalProperties.$reverse("mordor") }}</h1>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
